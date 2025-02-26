@@ -1,6 +1,8 @@
 import React from "react";
+import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import "swiper/css/navigation";
 
 // 이미지
 import arrow from "../assets/img/icons/ic_arrow.svg";
@@ -99,7 +101,7 @@ const Career = () => {
                   김가네, 청년다방, 생활맥주, 연안식당, 세광그린푸드 등 담당)
                 </p>
                 <ul>
-                  <li>PC / 모바일 버전 제작, 반응형 제작</li>
+                  <li>PC / 모바일 버전 제작 또는 반응형 제작</li>
                   <li>HTML, CSS, JavaScript, JQuery</li>
                   <li>웹 표준 준수, 크로스 브라우징</li>
                 </ul>
@@ -107,8 +109,9 @@ const Career = () => {
               {/* 스와이퍼 영역 */}
               <div className="swiper__area">
                 <Swiper
+                  modules={[Navigation]}
                   spaceBetween={18}
-                  slidesPerView={1.5}
+                  navigation
                   breakpoints={{
                     500: {
                       spaceBetween: 24,
@@ -121,9 +124,7 @@ const Career = () => {
                   }}
                 >
                   <SwiperSlide>
-                    <div className="img__area">
-                      <img src={hanchon} alt="한촌" width="100%" />
-                    </div>
+                    <img src={hanchon} alt="한촌" width="100%" />
                   </SwiperSlide>
                   <SwiperSlide>
                     <img src={kimgane} alt="김가네" width="100%" />
